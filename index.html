@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WSO Pokerregeln (World Series of Poker)</title>
+  <style>
+    :root{
+      --bg:#0f1115;
+      --card:#151823;
+      --muted:#a9b0c3;
+      --text:#e6e8ef;
+      --accent:#5b8cff;
+      --border:#23283a;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:saturate(180%) blur(8px);
+      background:rgba(15,17,21,.75);border-bottom:1px solid var(--border)
+    }
+    .wrap{max-width:1000px;margin:0 auto;padding:1rem 1.25rem}
+    h1{font-size:clamp(1.6rem,2.4vw,2.2rem);margin:.2rem 0 0 0}
+    .subtitle{color:var(--muted);margin:.2rem 0 0 0}
+    nav.toc{
+      margin:1rem 0;display:flex;flex-wrap:wrap;gap:.5rem
+    }
+    nav.toc a{
+      display:inline-block;padding:.4rem .7rem;border:1px solid var(--border);
+      border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));
+      color:var(--text)
+    }
+    main{max-width:1000px;margin:1rem auto;padding:0 1.25rem 4rem}
+    section{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:18px;padding:1.25rem;margin:1rem 0;box-shadow:0 10px 24px rgba(0,0,0,.25)
+    }
+    h2{margin-top:.2rem;font-size:1.35rem}
+    h3{margin-top:.2rem;font-size:1.05rem;color:var(--muted)}
+    ul{padding-left:1.2rem}
+    li{margin:.25rem 0}
+    code,kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;background:#0d0f14;padding:.1rem .35rem;border:1px solid var(--border);border-radius:.4rem}
+    .note{color:var(--muted);font-style:italic}
+    footer{max-width:1000px;margin:0 auto 4rem;padding:0 1.25rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>WSO Pokerregeln (World Series of Poker)</h1>
+      <p class="subtitle">No-Limit Texas Hold’em · TPA-Standards · Verhalten · Showdown-Regeln</p>
+      <nav class="toc" aria-label="Inhaltsverzeichnis">
+        <a href="#spielvarianten">Spielvarianten</a>
+        <a href="#grundregeln">Grundregeln</a>
+        <a href="#setzstruktur">Setzstruktur</a>
+        <a href="#chipregeln">Chipregeln</a>
+        <a href="#turnierstruktur">Turnierstruktur</a>
+        <a href="#etikette">Verhalten &amp; Etikette</a>
+        <a href="#regelverstosse">Regelverstösse</a>
+        <a href="#showdown">Showdown-Regeln</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="spielvarianten">
+      <h2>1. Spielvarianten</h2>
+      <ul>
+        <li>Texas Hold’em (No-Limit) – die beliebteste Variante bei der WSO.</li>
+        <li>Omaha (Pot-Limit oder Hi-Lo)</li>
+        <li>Seven Card Stud</li>
+        <li>Mixed Games (z. B. H.O.R.S.E., 8-Game Mix)</li>
+      </ul>
+      <p class="note">Die folgenden Regeln beziehen sich hauptsächlich auf No-Limit Texas Hold’em, das Standardspiel bei den Main Events.</p>
+      <ul>
+        <li>Alle Entscheidungen des Turnierdirektors sind endgültig.</li>
+        <li>Spieler haben das Recht, bei Unklarheiten den Floor zu rufen.</li>
+        <li>Der Button (Dealer-Position) wandert im Uhrzeigersinn.</li>
+      </ul>
+    </section>
+
+    <section id="grundregeln">
+      <h2>2. Grundregeln von Texas Hold’em</h2>
+      <h3>Ablauf einer Hand</h3>
+      <ol>
+        <li><strong>Blinds setzen:</strong> Zwei Spieler setzen Zwangseinsätze: Small Blind und Big Blind.</li>
+        <li><strong>Hole Cards:</strong> Jeder Spieler erhält zwei verdeckte Karten.</li>
+        <li><strong>Setzrunden:</strong>
+          <ul>
+            <li><em>Preflop:</em> Einsatzrunde nach den Hole Cards.</li>
+            <li><em>Flop:</em> Drei Gemeinschaftskarten offen, gefolgt von einer Setzrunde.</li>
+            <li><em>Turn:</em> Vierte Gemeinschaftskarte + Setzrunde.</li>
+            <li><em>River:</em> Fünfte Gemeinschaftskarte + letzte Setzrunde.</li>
+          </ul>
+        </li>
+        <li><strong>Showdown:</strong> Bei mehreren verbleibenden Spielern werden Karten aufgedeckt; die beste 5-Karten-Kombination gewinnt den Pot.</li>
+      </ol>
+    </section>
+
+    <section id="setzstruktur">
+      <h2>3. Setzstruktur: No-Limit</h2>
+      <ul>
+        <li>Jeder Spieler kann in jeder Runde alle Chips setzen (<em>All-In</em>).</li>
+        <li>Der Mindesteinsatz entspricht mindestens dem Big Blind oder dem vorherigen Raise.</li>
+      </ul>
+    </section>
+
+    <section id="chipregeln">
+      <h2>4. Chipregeln (inkl. TPA-Regeln)</h2>
+      <h3>4.1 Buy-in &amp; Startstack</h3>
+      <ul>
+        <li>Alle Spieler erhalten denselben Startstack gemäß Turnierstruktur.</li>
+        <li>Der Buy-in (inkl. Gebühren) ist vor Turnierbeginn vollständig zu bezahlen.</li>
+        <li>Rebuys/Add-ons nur, wenn vor Turnierbeginn/ in den offiziellen Regeln angekündigt.</li>
+      </ul>
+      <h3>4.2 Kein Chiptausch zwischen Spielern</h3>
+      <ul>
+        <li>Kein Übertragen, Verleihen oder Tauschen von Chips zwischen Spielern.</li>
+        <li>Verstösse gelten als <em>Collusion</em> und führen zur Disqualifikation der Beteiligten.</li>
+      </ul>
+      <h3>4.3 Chips im Spiel</h3>
+      <ul>
+        <li>Alle Chips müssen sichtbar und ordentlich gestapelt sein.</li>
+        <li>Größter Chipwert gut sichtbar oben/vorne (<em>TPA Stack Visibility Rule</em>).</li>
+        <li>Verstecken von (hochwärtigen) Chips ist verboten.</li>
+        <li>Auf Nachfrage muss eine ungefähre Stackgröße angegeben/angezeigt werden.</li>
+      </ul>
+      <h3>4.4 Chip Handling</h3>
+      <ul>
+        <li>Chips kontrolliert und klar in den Pot setzen; Werfen/Verzögern untersagt.</li>
+        <li>Chiptricks erlaubt, solange sie nicht stören.</li>
+        <li>Irreführende Bewegungen (vortäuschen, zögerlich schieben) sind verboten.</li>
+        <li>Spieler tragen Verantwortung für eindeutige Chip-Platzierung.</li>
+        <li>Unklare Aktionen können als verbindlich gewertet werden – im Zweifel entscheidet Dealer/Floor.</li>
+      </ul>
+      <h3>4.5 All-In &amp; Chiptrennung</h3>
+      <ul>
+        <li>Beim All-In alle Chips klar sichtbar auf einmal in die Mitte schieben.</li>
+        <li>Kein Zurückhalten von Chips (<em>Chipping Behind</em>) außer bei offiziellem Side Pot.</li>
+        <li>Exaktes Zählen nicht nötig, Überschlag erkennbar.</li>
+      </ul>
+      <h3>4.6 Chiprace (Chips entfernen)</h3>
+      <ul>
+        <li>Kleine, obsolet gewordene Chips werden per Chiprace entfernt.</li>
+        <li>Ein Spieler kann nie durch ein Chiprace ausscheiden – im Zweifel wird aufgerundet.</li>
+        <li>Keine eigenmächtige Abgabe/Tausch kleiner Chips.</li>
+      </ul>
+      <h3>4.7 Kein „Going South“</h3>
+      <ul>
+        <li>Es ist verboten, Chips aus dem Spiel zu nehmen – auch nicht kurzzeitig.</li>
+        <li>Ins Spiel gebrachte Chips bleiben bis zum Ausscheiden im Turnier.</li>
+        <li>Schwere Verstösse können zur sofortigen Disqualifikation führen.</li>
+      </ul>
+      <h3>4.8 Stack-Zählung</h3>
+      <ul>
+        <li>Recht auf Nachfrage nach ungefähren Stackgrößen.</li>
+        <li>Exaktes Zählen nur ausserhalb der Action (z. B. nach der Hand).</li>
+        <li>Spieler dürfen die ungefähre Angabe nicht verweigern.</li>
+      </ul>
+    </section>
+
+    <section id="turnierstruktur">
+      <h2>5. Turnierstruktur</h2>
+      <ul>
+        <li>Ausscheiden, wenn alle Chips verloren sind.</li>
+        <li>Blinds steigen regelmäßig in festen Intervallen.</li>
+        <li>Platzierung/Preisverteilung richtet sich nach dem Ausscheiden.</li>
+      </ul>
+    </section>
+
+    <section id="etikette">
+      <h2>6. Verhalten &amp; Etikette</h2>
+      <h3>6.1 Allgemeines Verhalten</h3>
+      <ul>
+        <li>Respektvolles, ruhiges, professionelles Auftreten.</li>
+        <li>Keine Beleidigungen, Provokationen, Schreien oder aggressive Körpersprache.</li>
+        <li>Alkoholexzesse/Drogenmissbrauch am Tisch können zum Ausschluss führen.</li>
+      </ul>
+      <h3>6.2 One Player per Hand</h3>
+      <ul>
+        <li>Streng: nur ein Spieler pro Hand.</li>
+        <li>Keine Tipps/Ratschläge/Kommentare zur laufenden Hand (verbal oder nonverbal).</li>
+        <li>Auch Zuschauer/Ausgeschiedene dürfen sich nicht einmischen.</li>
+      </ul>
+      <h3>6.3 Schutz der eigenen Hand</h3>
+      <ul>
+        <li>Spieler schützen ihre Karten selbst.</li>
+        <li>Unabsichtlich freigegebene/vermuckte Karten: Hand ist tot.</li>
+      </ul>
+      <h3>6.4 Klare und eindeutige Aktionen</h3>
+      <ul>
+        <li>Aktionen (Check, Call, Raise, Fold) klar verbal oder per eindeutiger Geste.</li>
+        <li>Keine verdeckten/undeutlichen Chipschübe (<em>String Bets</em>).</li>
+        <li>Kein Provozieren durch Chipspiel/Andeuten.</li>
+      </ul>
+      <h3>6.5 Rede- &amp; Showdown-Verhalten</h3>
+      <ul>
+        <li>Während der Hand: keine Kommentare zu Karten, Händen, Tendenzen, Wahrscheinlichkeiten.</li>
+        <li>Beim Showdown: nicht lügen – <em>Verbal ist bindend</em>.</li>
+        <li>Absichtliches Zögern (<em>Slowroll</em>) ist unsportlich.</li>
+      </ul>
+      <h3>6.6 Kein Angle Shooting</h3>
+      <ul>
+        <li>Absichtliche Täuschung in Grauzonen (falsche Ansagen, unklare Platzierung, Karten verstecken) ist verboten.</li>
+        <li>Kann zu Strafen führen.</li>
+      </ul>
+      <h3>6.7 Elektronische Geräte &amp; Ablenkung</h3>
+      <ul>
+        <li>Telefonieren am Tisch verboten.</li>
+        <li>Musik mit Kopfhörern erlaubt, solange der Spielfluss nicht gestört wird.</li>
+        <li>Keine Kommunikation über laufende Hände über Geräte/Chats.</li>
+      </ul>
+      <h3>6.8 Strafen &amp; Verwarnungen</h3>
+      <ul>
+        <li>Sanktionen: Verwarnung, Zeithandstrafe (1+ Runden), selten Chip-Strafe, Turnierausschluss.</li>
+        <li>Entscheidung des Floors ist endgültig (respektvoll diskutierbar).</li>
+      </ul>
+      <h3>6.9 Der „90 Seconds Button“</h3>
+      <ul>
+        <li>Offizieller Button pro Tisch; nutzbar bei übermässig langer Bedenkzeit.</li>
+        <li>Nach Aktivierung: 90 Sekunden für Aktion (Call/Raise/Fold).</li>
+        <li>Missbrauch kann zu Verwarnungen/Zeithandstrafen führen.</li>
+      </ul>
+      <h3>6.10 Setzpflicht mit den Nuts (TPA-Standard)</h3>
+      <ul>
+        <li>Am River als letzter in der Action mit den Nuts: nicht checken, sondern setzen/erhöhen.</li>
+        <li>Gilt nur, wenn klar feststeht, dass die Nuts gehalten werden.</li>
+        <li>Ziel: Soft Play verhindern, Integrität wahren.</li>
+        <li>Gilt nicht, wenn nach dem Nut-Halter noch Spieler handeln können, die Nuts unklar sind oder nur wahrscheinlich die beste Hand vorliegt.</li>
+        <li>Verstösse: Verwarnung, Zeithandstrafe, Wiederholung ggf. Disqualifikation.</li>
+      </ul>
+    </section>
+
+    <section id="regelverstosse">
+      <h2>7. Regelverstösse</h2>
+      <ul>
+        <li>Soft Play, Chip Dumping, Ghosting verboten.</li>
+        <li>Technische Hilfsmittel (z. B. Hand-Rechner) bei Live-Turnieren nicht erlaubt.</li>
+        <li>Strafen: Zeitstrafen, Chip-Abzüge, Disqualifikation.</li>
+      </ul>
+    </section>
+
+    <section id="showdown">
+      <h2>8. Showdown-Regeln (inkl. TPA-Regeln)</h2>
+      <h3>8.1 Reihenfolge beim Aufdecken</h3>
+      <ul>
+        <li>Bei Einsatz in der letzten Setzrunde zeigt der letzte Aggressor zuerst.</li>
+        <li>Ohne Einsatz beginnt der Spieler links vom Button.</li>
+        <li>Verlierer dürfen muck(en), müssen nicht zeigen (Ausnahmen siehe 8.5).</li>
+      </ul>
+      <h3>8.2 Verbindliche Ansagen</h3>
+      <ul>
+        <li><em>Verbal ist bindend:</em> Ansage bindet, auch wenn sie falsch war; gewertet wird die gezeigte Hand, Irreführung möglich.</li>
+      </ul>
+      <h3>8.3 Karten müssen offen gezeigt werden</h3>
+      <ul>
+        <li>Hand ist nur spielberechtigt, wenn beide Hole Cards offen sichtbar sind.</li>
+        <li>Karten im Muck sind tot, selbst wenn es die beste Hand gewesen wäre.</li>
+      </ul>
+      <h3>8.4 Kein absichtliches Verzögern („Slowroll“)</h3>
+      <ul>
+        <li>Slowrolling ist unsportlich und kann verwarnt/zeitbestraft werden.</li>
+      </ul>
+      <h3>8.5 Karten zeigen auf Anfrage (TPA Fairness-Regel)</h3>
+      <ul>
+        <li>Turnierleitung kann Kartenzeigen anordnen bei Hinweisen auf Mogelei, Collusion oder Soft Play.</li>
+        <li>Entscheidung liegt allein beim Floor, nicht bei Mitspielern.</li>
+      </ul>
+      <h3>8.6 Der Dealer bestimmt die Gewinnerhand</h3>
+      <ul>
+        <li>Nur die beste 5-Karten-Kombination zählt (laut Pokerhand-Ranking).</li>
+        <li>Dealer liest Hände; Spieler sollen offensichtliche Fehler melden.</li>
+        <li>Nach Beginn der nächsten Hand ist eine Korrektur der vorherigen Pot-Zuteilung ausgeschlossen.</li>
+      </ul>
+      <h3>8.7 Umgang mit dem Muck</h3
+```
